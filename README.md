@@ -73,4 +73,4 @@ Synthetic data solves real enterprise problems — HIPAA compliance, class imbal
 
 ## Author
 
-Isha — Data Scientist · [LinkedIn](https://linkedin.com/in/yourprofile) · [GitHub](https://github.com/ishh160)
+Isha — Data Scientist · [LinkedIn](https://www.linkedin.com/in/ishapatelip/) · [GitHub](https://github.com/ishh160)
