@@ -23,11 +23,11 @@ export default function ModelConfig({ uploadData, onComplete }) {
       `› starting ${model.toUpperCase()} — ${epochs} epochs...`,
     ])
     try {
-      const res = await axios.post("http://127.0.0.1:8000/train", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/train`, {
         filepath: uploadData.filepath,
         schema: uploadData.schema,
         epochs, num_rows: numRows, batch_size: batchSize
-      })
+    })
       setLog(l => [...l,
         `✓ training complete`,
         `✓ generated ${res.data.rows_generated.toLocaleString()} synthetic rows`,

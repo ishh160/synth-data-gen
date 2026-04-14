@@ -29,7 +29,7 @@ export default function Upload({ onComplete }) {
     setLoading(true)
     const form = new FormData()
     form.append("file", file)
-    const res = await axios.post("http://127.0.0.1:8000/upload", form)
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/upload`, form)
     setMeta(res.data)
     setSchema(res.data.schema)
     setLoading(false)

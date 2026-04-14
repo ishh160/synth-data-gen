@@ -13,7 +13,7 @@ export default function FidelityDashboard({ uploadData, trainData, onComplete })
   const barRef = useRef(null)
 
   useEffect(() => {
-    axios.post("http://127.0.0.1:8000/fidelity", {
+    axios.post(`${import.meta.env.VITE_API_URL}/fidelity`, {
       real_path: uploadData.filepath,
       synthetic_path: trainData.synthetic_path
     }).then(res => {
@@ -162,7 +162,7 @@ export default function FidelityDashboard({ uploadData, trainData, onComplete })
             {trainData.rows_generated.toLocaleString()} rows · {trainData.columns.length} columns
           </div>
         </div>
-        <a href={`http://127.0.0.1:8000/download/${trainData.synthetic_path.split("/").pop()}`}
+        <a href={`${import.meta.env.VITE_API_URL}/download/${trainData.synthetic_path.split("/").pop()}`}
           style={{ padding: "8px 20px", borderRadius: "6px", background: t.accent,
             color: t.bg, fontSize: "12px", fontWeight: "500",
             textDecoration: "none", letterSpacing: "0.04em", fontFamily: t.mono }}>
